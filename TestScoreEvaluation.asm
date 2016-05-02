@@ -42,12 +42,12 @@ L1:
 	mov eax, 101
 	call RandomRange
 	cmp eax, 50
-	jnae L1					;if the random number is below 50, jump back to L1. We want nothing to do with your shenanigans.
+	jnae L1				;if the random number is below 50, jump back to L1. We want nothing to do with your shenanigans.
 	call writeDec
 
 	Grade_A:
 	cmp eax, 90
-	jnge Grade_B			;jump to Grade_B if not greater or equal to
+	jnge Grade_B		;jump to Grade_B if not greater or equal to
 	mov al, 'A'
 	call printGrade
 	cmp ecx, 0
@@ -90,7 +90,7 @@ L1:
 	je Quit
 	loop L1
 	
-	Quit:								;Quit if ecx = 0
+	Quit:					;Quit if ecx = 0
 	exit
 	GradeCalc endp
 
